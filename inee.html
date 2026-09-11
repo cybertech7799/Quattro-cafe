@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quattro Cafè | كواترو كافيه وكووركينج سبايس</title>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Cairo & Poppins -->
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -33,33 +36,87 @@
             }
         }
     </script>
-    
+
     <style>
-        /* خلفية داكنة جداً غنية بتدرجات القهوة الداكنة لإبراز النصوص البيضاء بوضوح عالي */
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
         body {
-            background: linear-gradient(135deg, #090302 0%, #150804 35%, #1A0B05 70%, #0D0402 100%);
+            background:
+                radial-gradient(
+                    circle at 10% 15%,
+                    rgba(245, 158, 11, 0.16),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 90% 10%,
+                    rgba(234, 88, 12, 0.14),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(251, 191, 36, 0.08),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 15% 85%,
+                    rgba(234, 88, 12, 0.10),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    135deg,
+                    #090302 0%,
+                    #150804 35%,
+                    #1A0B05 70%,
+                    #0D0402 100%
+                );
+
             background-attachment: fixed;
+            background-size: cover;
             color: #FFFFFF;
             font-family: 'Cairo', 'Poppins', sans-serif;
             overflow-x: hidden;
         }
 
-        /* شبكة نقاط خفيفة وداكنة في الخلفية لعمق بصري مريح */
+        /* Pattern خفيف */
         .bg-pattern {
-            background-image: radial-gradient(rgba(245, 158, 11, 0.08) 1px, transparent 1px);
-            background-size: 28px 28px;
+            background-image:
+                radial-gradient(
+                    rgba(245, 158, 11, 0.12) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    rgba(245, 158, 11, 0.025) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(245, 158, 11, 0.025) 1px,
+                    transparent 1px
+                );
+
+            background-size:
+                28px 28px,
+                80px 80px,
+                80px 80px;
         }
 
-        /* كروت معتمة ومغشية بدرجة مظلمة تضمن تباين واستجابة ممتازة للنص الأبيض */
+        /* =========================
+           GLASS PANELS
+        ========================= */
+
         .glass-panel {
             background: rgba(20, 9, 5, 0.82);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
             border: 1px solid rgba(245, 158, 11, 0.25);
-            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8), inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+            box-shadow:
+                0 15px 35px -10px rgba(0, 0, 0, 0.8),
+                inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
         }
 
-        /* هيدر معتم للحفاظ على وضوح الروابط */
         .glass-nav {
             background: rgba(12, 5, 3, 0.92);
             backdrop-filter: blur(20px);
@@ -67,370 +124,1049 @@
             border-bottom: 1px solid rgba(245, 158, 11, 0.25);
         }
 
-        /* تدرج نصي ذهبي شديد الوضوح */
+        /* =========================
+           GOLD TEXT
+        ========================= */
+
         .gold-gradient-text {
-            background: linear-gradient(135deg, #FFF 0%, #FBBF24 40%, #F59E0B 80%, #D97706 100%);
+            background: linear-gradient(
+                135deg,
+                #FFF 0%,
+                #FBBF24 40%,
+                #F59E0B 80%,
+                #D97706 100%
+            );
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* تأثير التوهج والتفاعل مع الماوس */
+        /* =========================
+           HOVER EFFECT
+        ========================= */
+
         .card-hover-glow {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition:
+                all 0.4s cubic-bezier(
+                    0.175,
+                    0.885,
+                    0.32,
+                    1.275
+                );
         }
+
         .card-hover-glow:hover {
             transform: translateY(-6px) scale(1.01);
             border-color: rgba(251, 191, 36, 0.6);
-            box-shadow: 0 20px 40px -10px rgba(245, 158, 11, 0.25);
+
+            box-shadow:
+                0 20px 40px -10px rgba(245, 158, 11, 0.25);
+
             background: rgba(28, 12, 6, 0.92);
         }
 
-        /* تخصيص السكرول بار */
+        /* =========================
+           BACKGROUND SHAPES
+        ========================= */
+
+        .background-shape {
+            position: absolute;
+            border-radius: 9999px;
+            pointer-events: none;
+        }
+
+        .floating-circle {
+            animation: float 12s ease-in-out infinite;
+        }
+
+        .floating-circle-slow {
+            animation: floatSlow 18s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+
+            50% {
+                transform: translateY(-25px) translateX(15px);
+            }
+        }
+
+        @keyframes floatSlow {
+            0%, 100% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(30px) translateX(-20px) rotate(8deg);
+            }
+        }
+
+        /* =========================
+           SCROLLBAR
+        ========================= */
+
         ::-webkit-scrollbar {
             width: 10px;
         }
+
         ::-webkit-scrollbar-track {
             background: #090302;
         }
+
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #F59E0B, #D97706);
+            background: linear-gradient(
+                to bottom,
+                #F59E0B,
+                #D97706
+            );
+
             border-radius: 5px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #FBBF24;
         }
+
     </style>
 </head>
+
+
 <body class="antialiased selection:bg-amber-500 selection:text-black min-h-screen flex flex-col justify-between bg-pattern">
 
-    <!-- إضاءة خلفية هادئة جداً وداكنة لعدم التأثير على النص -->
-    <div class="fixed top-0 right-1/4 w-[500px] h-[500px] bg-amber-600/10 rounded-full blur-[160px] pointer-events-none"></div>
-    <div class="fixed bottom-1/3 left-10 w-[600px] h-[600px] bg-orange-700/10 rounded-full blur-[180px] pointer-events-none"></div>
+    <!-- =========================
+         BACKGROUND DECORATIONS
+    ========================= -->
 
-    <!-- الهيدر / شريط التنقل -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+
+        <!-- Glow top right -->
+        <div class="background-shape floating-circle
+                    w-[500px] h-[500px]
+                    bg-amber-500/10
+                    blur-[130px]
+                    -top-40
+                    -right-40">
+        </div>
+
+        <!-- Glow left -->
+        <div class="background-shape floating-circle-slow
+                    w-[500px] h-[500px]
+                    bg-orange-600/10
+                    blur-[140px]
+                    top-[35%]
+                    -left-48">
+        </div>
+
+        <!-- Glow bottom -->
+        <div class="background-shape floating-circle
+                    w-[350px] h-[350px]
+                    bg-yellow-400/10
+                    blur-[110px]
+                    bottom-0
+                    right-[20%]">
+        </div>
+
+        <!-- Large circle -->
+        <div class="absolute
+                    w-[650px]
+                    h-[650px]
+                    rounded-full
+                    border
+                    border-amber-500/5
+                    top-1/2
+                    left-1/2
+                    -translate-x-1/2
+                    -translate-y-1/2">
+        </div>
+
+        <!-- Circle right -->
+        <div class="absolute
+                    w-[350px]
+                    h-[350px]
+                    rounded-full
+                    border
+                    border-amber-400/10
+                    top-[20%]
+                    right-[5%]">
+        </div>
+
+        <!-- Circle left -->
+        <div class="absolute
+                    w-[450px]
+                    h-[450px]
+                    rounded-full
+                    border
+                    border-orange-400/10
+                    bottom-[10%]
+                    left-[3%]">
+        </div>
+
+        <!-- Small decorative circles -->
+        <div class="absolute
+                    w-20
+                    h-20
+                    rounded-full
+                    border
+                    border-amber-400/10
+                    top-[35%]
+                    left-[25%]">
+        </div>
+
+        <div class="absolute
+                    w-12
+                    h-12
+                    rounded-full
+                    bg-amber-400/5
+                    top-[70%]
+                    right-[30%]
+                    blur-sm">
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
             <div class="flex items-center justify-between h-20">
-                <!-- اللوجو -->
+
+                <!-- LOGO -->
+
                 <a href="#" class="flex items-center gap-3 group">
+
                     <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 via-orange-500 to-amber-700 p-[2px] shadow-lg shadow-amber-500/20 group-hover:scale-110 transition-transform">
+
                         <div class="w-full h-full bg-[#0C0503] rounded-[14px] flex items-center justify-center">
+
                             <i class="fa-solid fa-mug-hot text-amber-400 text-xl group-hover:rotate-12 transition-transform"></i>
+
                         </div>
+
                     </div>
+
                     <div>
-                        <span class="text-2xl font-black tracking-wider gold-gradient-text font-en block">QUATTRO</span>
-                        <span class="text-[10px] tracking-widest text-amber-400 font-bold block -mt-1 uppercase">Cafè & Workspace</span>
+
+                        <span class="text-2xl font-black tracking-wider gold-gradient-text font-en block">
+                            QUATTRO
+                        </span>
+
+                        <span class="text-[10px] tracking-widest text-amber-400 font-bold block -mt-1 uppercase">
+                            Cafè & Workspace
+                        </span>
+
                     </div>
+
                 </a>
 
-                <!-- روابط التنقل -->
+
+                <!-- NAVIGATION -->
+
                 <nav class="hidden md:flex items-center gap-8 font-bold text-sm">
-                    <a href="#home" class="text-white hover:text-amber-400 transition-colors py-1">الرئيسية</a>
-                    <a href="#about" class="text-white hover:text-amber-400 transition-colors py-1">عن كواترو</a>
-                    <a href="#coworking" class="text-white hover:text-amber-400 transition-colors py-1">مساحة العمل</a>
-                    <a href="#menu" class="text-white hover:text-amber-400 transition-colors py-1">المنيو</a>
-                    <a href="#contact" class="text-white hover:text-amber-400 transition-colors py-1">تواصل معنا</a>
+
+                    <a href="#home" class="text-white hover:text-amber-400 transition-colors py-1">
+                        الرئيسية
+                    </a>
+
+                    <a href="#about" class="text-white hover:text-amber-400 transition-colors py-1">
+                        عن كواترو
+                    </a>
+
+                    <a href="#coworking" class="text-white hover:text-amber-400 transition-colors py-1">
+                        مساحة العمل
+                    </a>
+
+                    <a href="#menu" class="text-white hover:text-amber-400 transition-colors py-1">
+                        المنيو
+                    </a>
+
+                    <a href="#contact" class="text-white hover:text-amber-400 transition-colors py-1">
+                        تواصل معنا
+                    </a>
+
                 </nav>
 
-                <!-- زر الإتصال -->
+
+                <!-- PHONE -->
+
                 <div class="hidden md:flex items-center gap-4">
-                    <a href="tel:01061020623" class="flex items-center gap-2 bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-black font-black px-6 py-2.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm transform hover:-translate-y-0.5">
+
+                    <a href="tel:01061020623"
+                       class="flex items-center gap-2 bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-black font-black px-6 py-2.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm transform hover:-translate-y-0.5">
+
                         <i class="fa-solid fa-phone"></i>
-                        <span class="font-en">01061020623</span>
+
+                        <span class="font-en">
+                            01061020623
+                        </span>
+
                     </a>
+
                 </div>
 
-                <!-- زر الموبايل -->
-                <button id="mobile-menu-btn" class="md:hidden text-amber-400 hover:text-white text-2xl focus:outline-none p-2">
+
+                <!-- MOBILE BUTTON -->
+
+                <button id="mobile-menu-btn"
+                        class="md:hidden text-amber-400 hover:text-white text-2xl focus:outline-none p-2">
+
                     <i class="fa-solid fa-bars-staggered"></i>
+
                 </button>
+
             </div>
+
         </div>
 
-        <!-- قائمة الموبايل -->
-        <div id="mobile-menu" class="hidden md:hidden border-b border-amber-500/30 bg-[#0C0503]/98 backdrop-blur-2xl px-6 pt-3 pb-6 space-y-3">
-            <a href="#home" class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400 border-b border-amber-900/30">الرئيسية</a>
-            <a href="#about" class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400 border-b border-amber-900/30">عن كواترو</a>
-            <a href="#coworking" class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400 border-b border-amber-900/30">مساحة العمل</a>
-            <a href="#menu" class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400 border-b border-amber-900/30">المنيو</a>
-            <a href="#contact" class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400">تواصل معنا</a>
+
+        <!-- MOBILE MENU -->
+
+        <div id="mobile-menu"
+             class="hidden md:hidden border-b border-amber-500/30 bg-[#0C0503]/98 backdrop-blur-2xl px-6 pt-3 pb-6 space-y-3">
+
+            <a href="#home"
+               class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400 border-b border-amber-900/30">
+                الرئيسية
+            </a>
+
+            <a href="#about"
+               class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400 border-b border-amber-900/30">
+                عن كواترو
+            </a>
+
+            <a href="#coworking"
+               class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400 border-b border-amber-900/30">
+                مساحة العمل
+            </a>
+
+            <a href="#menu"
+               class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400 border-b border-amber-900/30">
+                المنيو
+            </a>
+
+            <a href="#contact"
+               class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400">
+                تواصل معنا
+            </a>
+
             <div class="pt-2">
-                <a href="tel:01061020623" class="flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-orange-500 text-black font-black py-3 rounded-xl shadow-lg shadow-amber-500/20">
+
+                <a href="tel:01061020623"
+                   class="flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-orange-500 text-black font-black py-3 rounded-xl shadow-lg shadow-amber-500/20">
+
                     <i class="fa-solid fa-phone"></i>
-                    <span>اتصل بنا: 01061020623</span>
+
+                    <span>
+                        اتصل بنا: 01061020623
+                    </span>
+
                 </a>
+
             </div>
+
         </div>
+
     </header>
 
-    <!-- الهيرو / الشاشة الرئيسية -->
-    <section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section id="home"
+             class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
+
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+
                     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-400/40 bg-amber-950/60 text-amber-300 text-xs sm:text-sm font-extrabold shadow-lg backdrop-blur-md">
+
                         <i class="fa-solid fa-sparkles text-amber-400"></i>
-                        <span>المكان الأفخم والأكثر حيوية في مدينة 6 أكتوبر</span>
+
+                        <span>
+                            المكان الأفخم والأكثر حيوية في مدينة 6 أكتوبر
+                        </span>
+
                     </div>
-                    
+
+
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.25]">
-                        مساحة عمل ملهمة للابتكار والإنجاز مع <span class="gold-gradient-text">القهوة المختصة</span>
+
+                        مساحة عمل ملهمة للابتكار والإنجاز مع
+
+                        <span class="gold-gradient-text">
+                            القهوة المختصة
+                        </span>
+
                     </h1>
 
+
                     <p class="text-base sm:text-lg text-gray-200 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                        استمتع بتجربة الـ V60 والمشروبات المبتكرة، مع أجواء هادئة ومجهزة بإنترنت سريع لزيادة إنتاجيتك واستقبال أصدقائك بمدينة 6 أكتوبر.
+
+                        استمتع بتجربة الـ V60 والمشروبات المبتكرة،
+                        مع أجواء هادئة ومجهزة بإنترنت سريع لزيادة إنتاجيتك
+                        واستقبال أصدقائك بمدينة 6 أكتوبر.
+
                     </p>
+
 
                     <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <a href="#menu" class="w-full sm:w-auto text-center bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-black font-black px-8 py-4 rounded-xl transition-all shadow-xl shadow-amber-500/20 text-base transform hover:-translate-y-1">
-                            استكشف المنيو الكامل <i class="fa-solid fa-arrow-left mr-2"></i>
+
+                        <a href="#menu"
+                           class="w-full sm:w-auto text-center bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-black font-black px-8 py-4 rounded-xl transition-all shadow-xl shadow-amber-500/20 text-base transform hover:-translate-y-1">
+
+                            استكشف المنيو الكامل
+
+                            <i class="fa-solid fa-arrow-left mr-2"></i>
+
                         </a>
-                        <a href="https://wa.me/201061020623?text=مرحباً%20كواترو%20كافيه،%20أريد%20حجز%20مكتب/مساحة%20عمل." target="_blank" class="w-full sm:w-auto text-center border border-amber-500/50 hover:border-amber-400 bg-amber-950/50 hover:bg-amber-900/80 text-white font-bold px-8 py-4 rounded-xl transition-all text-base backdrop-blur-md">
-                            احجز مكانك الآن <i class="fa-brands fa-whatsapp ml-2 text-green-400 text-lg"></i>
+
+
+                        <a href="https://wa.me/201061020623?text=مرحباً%20كواترو%20كافيه،%20أريد%20حجز%20مكتب/مساحة%20عمل."
+                           target="_blank"
+                           class="w-full sm:w-auto text-center border border-amber-500/50 hover:border-amber-400 bg-amber-950/50 hover:bg-amber-900/80 text-white font-bold px-8 py-4 rounded-xl transition-all text-base backdrop-blur-md">
+
+                            احجز مكانك الآن
+
+                            <i class="fa-brands fa-whatsapp ml-2 text-green-400 text-lg"></i>
+
                         </a>
+
                     </div>
 
-                    <!-- مميزات سريعة -->
+
+                    <!-- FEATURES -->
+
                     <div class="pt-8 grid grid-cols-3 gap-4 border-t border-amber-500/20 text-center lg:text-right">
+
                         <div class="p-3 rounded-2xl glass-panel">
-                            <p class="text-xl sm:text-2xl font-black text-amber-400">100%</p>
-                            <p class="text-xs text-gray-300 font-bold">حبوب أرابيكا فاخرة</p>
+
+                            <p class="text-xl sm:text-2xl font-black text-amber-400">
+                                100%
+                            </p>
+
+                            <p class="text-xs text-gray-300 font-bold">
+                                حبوب أرابيكا فاخرة
+                            </p>
+
                         </div>
+
+
                         <div class="p-3 rounded-2xl glass-panel">
-                            <p class="text-xl sm:text-2xl font-black text-amber-400">إنترنت فائـق</p>
-                            <p class="text-xs text-gray-300 font-bold">سرعة عالية للعمل</p>
+
+                            <p class="text-xl sm:text-2xl font-black text-amber-400">
+                                إنترنت فائـق
+                            </p>
+
+                            <p class="text-xs text-gray-300 font-bold">
+                                سرعة عالية للعمل
+                            </p>
+
                         </div>
+
+
                         <div class="p-3 rounded-2xl glass-panel">
-                            <p class="text-xl sm:text-2xl font-black text-amber-400">بيئة مجهزة</p>
-                            <p class="text-xs text-gray-300 font-bold">وصلات لكل مكتب</p>
+
+                            <p class="text-xl sm:text-2xl font-black text-amber-400">
+                                بيئة مجهزة
+                            </p>
+
+                            <p class="text-xs text-gray-300 font-bold">
+                                وصلات لكل مكتب
+                            </p>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- صورة / كارت البانر -->
+
+                <!-- HERO CARD -->
+
                 <div class="lg:col-span-5 flex justify-center">
+
                     <div class="relative w-full max-w-md group">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-700 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-500"></div>
-                        
+
+                        <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-700 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-500">
+                        </div>
+
+
                         <div class="glass-panel p-5 rounded-3xl relative z-10 space-y-5">
+
                             <div class="relative h-72 rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl">
-                                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1000" alt="Quattro Cafe Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1000"
+                                     alt="Quattro Cafe Interior"
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+
                                 <div class="absolute bottom-4 right-4 left-4 z-20">
-                                    <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-black text-xs font-black px-3 py-1 rounded-full shadow-lg inline-block mb-1">المشروب الأشهر</span>
-                                    <h3 class="text-xl font-bold text-white">V60 & Specialty Cold Brew</h3>
+
+                                    <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-black text-xs font-black px-3 py-1 rounded-full shadow-lg inline-block mb-1">
+                                        المشروب الأشهر
+                                    </span>
+
+                                    <h3 class="text-xl font-bold text-white">
+                                        V60 & Specialty Cold Brew
+                                    </h3>
+
                                 </div>
+
                             </div>
+
 
                             <div class="flex items-center justify-between text-xs sm:text-sm text-gray-200 border-t border-amber-500/20 pt-3 px-1 font-bold">
+
                                 <div class="flex items-center gap-2 text-amber-400">
+
                                     <i class="fa-solid fa-bolt"></i>
-                                    <span>وصلات كهرباء لكل مكتب</span>
+
+                                    <span>
+                                        وصلات كهرباء لكل مكتب
+                                    </span>
+
                                 </div>
+
+
                                 <div class="flex items-center gap-2 text-amber-400">
+
                                     <i class="fa-solid fa-clock"></i>
-                                    <span>مفتوح يومياً</span>
+
+                                    <span>
+                                        مفتوح يومياً
+                                    </span>
+
                                 </div>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
 
             </div>
+
         </div>
+
     </section>
 
-    <!-- مميزات المكان ومساحة العمل -->
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
     <section id="about" class="py-20 relative">
-        <div id="coworking" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div id="coworking"
+             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
             <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
-                <span class="text-amber-400 font-black text-sm tracking-wider uppercase">لماذا تختار كواترو؟</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white">صُمم لجمع <span class="gold-gradient-text">التركيز والرفاهية</span></h2>
-                <p class="text-gray-300 text-sm sm:text-base">سواء كنت تريد إنهاء مشروع عمل، المذاكرة للامتحانات، أو الاستمتاع بقهوة مختصة مع أصدقائك.</p>
+
+                <span class="text-amber-400 font-black text-sm tracking-wider uppercase">
+                    لماذا تختار كواترو؟
+                </span>
+
+                <h2 class="text-3xl sm:text-4xl font-black text-white">
+
+                    صُمم لجمع
+
+                    <span class="gold-gradient-text">
+                        التركيز والرفاهية
+                    </span>
+
+                </h2>
+
+                <p class="text-gray-300 text-sm sm:text-base">
+
+                    سواء كنت تريد إنهاء مشروع عمل،
+                    المذاكرة للامتحانات، أو الاستمتاع بقهوة مختصة مع أصدقائك.
+
+                </p>
+
             </div>
+
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- كارت 1 -->
+
+                <!-- CARD 1 -->
+
                 <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
+
                     <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
+
                         <i class="fa-solid fa-wifi"></i>
+
                     </div>
-                    <h3 class="text-xl font-black text-white">واي فاي ألياف ضوئية</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">إنترنت فائق السرعة ومستقر يضمن لك إجراء المكالمات والاجتماعات أونلاين وإنجاز عملك بدون انقطاع.</p>
-                </div>
 
-                <!-- كارت 2 -->
-                <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
-                        <i class="fa-solid fa-mug-hot"></i>
-                    </div>
-                    <h3 class="text-xl font-black text-white">قهوة مختصة واستثنائية</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">حبوب قهوة نقية ومحمصة بعناية، تقنيات تقطير احترافية V60، ومشروبات لاتيه مميزة ومبتكرة.</p>
-                </div>
+                    <h3 class="text-xl font-black text-white">
+                        واي فاي ألياف ضوئية
+                    </h3>
 
-                <!-- كارت 3 -->
-                <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
-                        <i class="fa-solid fa-laptop-code"></i>
-                    </div>
-                    <h3 class="text-xl font-black text-white">أماكن عمل مريحة وهادئة</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">كراسي مريحة للظهر، إضاءات مدروسة للتركيز، ومنافذ كهرباء متوفرة بكل سهولة بجانب كل مقعد.</p>
-                </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">
 
-                <!-- كارت 4 -->
-                <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
-                        <i class="fa-solid fa-utensils"></i>
-                    </div>
-                    <h3 class="text-xl font-black text-white">مخبوزات ووجبات طازجة</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">تشكيلة يومية من الكرواسون المخبوز طازجاً، الساندوتشات المميزة، والحلويات الغنية لإنعاش يومك.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                        إنترنت فائق السرعة ومستقر يضمن لك إجراء المكالمات
+                        والاجتماعات أونلاين وإنجاز عملك بدون انقطاع.
 
-    <!-- المنيو التفاعلي -->
-    <section id="menu" class="py-20 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 border-b border-amber-500/20 pb-8">
-                <div>
-                    <span class="text-amber-400 font-black text-sm tracking-wider uppercase">قائمة المشروبات والأطعمة</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">استكشف <span class="gold-gradient-text">المنيو الكامل</span></h2>
-                </div>
-
-                <!-- مربع البحث -->
-                <div class="relative w-full md:w-80">
-                    <input type="text" id="menu-search" placeholder="ابحث باسم المشروب أو الأكلة..." 
-                        class="w-full bg-[#180A05] border border-amber-500/40 focus:border-amber-400 rounded-xl px-4 py-3 pr-10 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400/30 transition-all">
-                    <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3.5 text-amber-400"></i>
-                </div>
-            </div>
-
-            <!-- أزرار التصفية -->
-            <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-8 text-sm" id="category-tabs">
-                <button data-cat="all" class="tab-btn active px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap bg-gradient-to-r from-amber-400 to-orange-500 text-black shadow-lg shadow-amber-500/20">الكل</button>
-                <button data-cat="hot-coffee" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">قهوة ساخنة</button>
-                <button data-cat="hot-drinks" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">مشروبات ساخنة وشاي</button>
-                <button data-cat="cold-coffee" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">قهوة باردة</button>
-                <button data-cat="smoothies" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">سموزي</button>
-                <button data-cat="cocktails" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">كوكتيلات ومشروبات باردة</button>
-                <button data-cat="juices" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">عصائر طازجة</button>
-                <button data-cat="frappes" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">ميلك شيك وفرابيه</button>
-                <button data-cat="food" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">إفطار وأطعمة</button>
-                <button data-cat="desserts" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">حلويات وآيس كريم</button>
-            </div>
-
-            <!-- شبكة عرض العناصر -->
-            <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- سيتم ملئ العناصر ديناميكياً بواسطة الجافاسكريبت -->
-            </div>
-
-            <!-- حالة عدم وجود نتائج -->
-            <div id="no-results" class="hidden text-center py-16 space-y-3">
-                <i class="fa-solid fa-mug-hot text-5xl text-amber-500/40"></i>
-                <p class="text-gray-300 text-lg font-bold">لم نجد أي صنف يطابق بحثك الحالي.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- التواصل والموقع -->
-    <section id="contact" class="py-20 relative border-t border-amber-500/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <span class="text-amber-400 font-black text-sm tracking-wider uppercase">زورنا اليوم</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-white">المكان المثالي لإنتاجيتك وراحتك</h2>
-                    <p class="text-gray-300 leading-relaxed">
-                        نرحب بك في كواترو كافيه بقلب مدينة 6 أكتوبر. ابدأ يومك بقهوتك المفضلة، أو أنجز أعمالك بتركيز تام في بيئة مريحة.
                     </p>
 
-                    <div class="space-y-4 pt-2">
-                        <div class="flex items-start gap-4 p-4 rounded-2xl glass-panel">
-                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-xl shrink-0 font-bold shadow-lg">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white text-base">العنوان</h4>
-                                <p class="text-sm text-gray-300">كواترو كافيه، المحور المركزي، مدينة 6 أكتوبر، الجيزة</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl glass-panel">
-                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-xl shrink-0 font-bold shadow-lg">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white text-base">الهاتف والاستفسارات</h4>
-                                <a href="tel:01061020623" class="text-sm text-amber-400 font-black hover:underline font-en">01061020623</a>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl glass-panel">
-                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center text-black text-xl shrink-0 font-bold shadow-lg">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white text-base">حجز مساحات العمل عبر واتساب</h4>
-                                <a href="https://wa.me/201061020623" target="_blank" class="text-sm text-green-400 font-bold hover:underline">تحدث معنا مباشرة على واتساب</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- خريطة توضيحية -->
-                <div class="glass-panel p-4 rounded-3xl border border-amber-500/30 overflow-hidden h-96 flex flex-col justify-center items-center text-center relative group">
-                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0C0503] via-[#0C0503]/80 to-transparent"></div>
-                    
-                    <div class="relative z-10 space-y-4 p-6">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-3xl mx-auto shadow-xl animate-bounce">
-                            <i class="fa-solid fa-map-pin"></i>
-                        </div>
-                        <h3 class="text-2xl font-black text-white">Quattro Cafè 6th of October</h3>
-                        <p class="text-sm text-gray-300 font-medium">المحور المركزي - موقع متميز وسهل الوصول</p>
-                        <a href="https://maps.google.com/?q=6th+of+October+City" target="_blank" class="inline-block bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-black font-black text-sm px-6 py-3 rounded-xl transition-all shadow-lg shadow-amber-500/20 hover:scale-105">
-                            افتح الموقع في خرائط جوجل <i class="fa-solid fa-location-arrow mr-1"></i>
-                        </a>
+
+                <!-- CARD 2 -->
+
+                <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
+
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
+
+                        <i class="fa-solid fa-mug-hot"></i>
+
                     </div>
+
+                    <h3 class="text-xl font-black text-white">
+                        قهوة مختصة واستثنائية
+                    </h3>
+
+                    <p class="text-sm text-gray-300 leading-relaxed">
+
+                        حبوب قهوة نقية ومحمصة بعناية،
+                        تقنيات تقطير احترافية V60،
+                        ومشروبات لاتيه مميزة ومبتكرة.
+
+                    </p>
+
                 </div>
+
+
+                <!-- CARD 3 -->
+
+                <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
+
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
+
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                    </div>
+
+                    <h3 class="text-xl font-black text-white">
+                        أماكن عمل مريحة وهادئة
+                    </h3>
+
+                    <p class="text-sm text-gray-300 leading-relaxed">
+
+                        كراسي مريحة للظهر، إضاءات مدروسة للتركيز،
+                        ومنافذ كهرباء متوفرة بكل سهولة بجانب كل مقعد.
+
+                    </p>
+
+                </div>
+
+
+                <!-- CARD 4 -->
+
+                <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
+
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
+
+                        <i class="fa-solid fa-utensils"></i>
+
+                    </div>
+
+                    <h3 class="text-xl font-black text-white">
+                        مخبوزات ووجبات طازجة
+                    </h3>
+
+                    <p class="text-sm text-gray-300 leading-relaxed">
+
+                        تشكيلة يومية من الكرواسون المخبوز طازجاً،
+                        الساندوتشات المميزة، والحلويات الغنية لإنعاش يومك.
+
+                    </p>
+
+                </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- الفوتر -->
-    <footer class="border-t border-amber-500/20 bg-[#060201] py-10 relative">
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <section id="menu" class="py-20 relative">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black font-bold">
-                        <i class="fa-solid fa-mug-hot"></i>
-                    </div>
-                    <span class="text-xl font-black text-white tracking-wider font-en">QUATTRO CAFÈ</span>
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 border-b border-amber-500/20 pb-8">
+
+                <div>
+
+                    <span class="text-amber-400 font-black text-sm tracking-wider uppercase">
+                        قائمة المشروبات والأطعمة
+                    </span>
+
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">
+
+                        استكشف
+
+                        <span class="gold-gradient-text">
+                            المنيو الكامل
+                        </span>
+
+                    </h2>
+
                 </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="relative w-full md:w-80">
+
+                    <input type="text"
+                           id="menu-search"
+                           placeholder="ابحث باسم المشروب أو الأكلة..."
+                           class="w-full bg-[#180A05] border border-amber-500/40 focus:border-amber-400 rounded-xl px-4 py-3 pr-10 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400/30 transition-all">
+
+                    <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3.5 text-amber-400"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- CATEGORY BUTTONS -->
+
+            <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-8 text-sm"
+                 id="category-tabs">
+
+                <button data-cat="all"
+                        class="tab-btn active px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap bg-gradient-to-r from-amber-400 to-orange-500 text-black shadow-lg shadow-amber-500/20">
+                    الكل
+                </button>
+
+                <button data-cat="hot-coffee"
+                        class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
+                    قهوة ساخنة
+                </button>
+
+                <button data-cat="hot-drinks"
+                        class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
+                    مشروبات ساخنة وشاي
+                </button>
+
+                <button data-cat="cold-coffee"
+                        class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
+                    قهوة باردة
+                </button>
+
+                <button data-cat="smoothies"
+                        class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
+                    سموزي
+                </button>
+
+                <button data-cat="cocktails"
+                        class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
+                    كوكتيلات ومشروبات باردة
+                </button>
+
+                <button data-cat="juices"
+                        class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
+                    عصائر طازجة
+                </button>
+
+                <button data-cat="frappes"
+                        class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
+                    ميلك شيك وفرابيه
+                </button>
+
+                <button data-cat="food"
+                        class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
+                    إفطار وأطعمة
+                </button>
+
+                <button data-cat="desserts"
+                        class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
+                    حلويات وآيس كريم
+                </button>
+
+            </div>
+
+
+            <!-- MENU GRID -->
+
+            <div id="menu-grid"
+                 class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+
+
+            <!-- NO RESULTS -->
+
+            <div id="no-results"
+                 class="hidden text-center py-16 space-y-3">
+
+                <i class="fa-solid fa-mug-hot text-5xl text-amber-500/40"></i>
+
+                <p class="text-gray-300 text-lg font-bold">
+                    لم نجد أي صنف يطابق بحثك الحالي.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact"
+             class="py-20 relative border-t border-amber-500/20">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <div class="space-y-6">
+
+                    <span class="text-amber-400 font-black text-sm tracking-wider uppercase">
+                        زورنا اليوم
+                    </span>
+
+                    <h2 class="text-3xl sm:text-4xl font-black text-white">
+                        المكان المثالي لإنتاجيتك وراحتك
+                    </h2>
+
+                    <p class="text-gray-300 leading-relaxed">
+
+                        نرحب بك في كواترو كافيه بقلب مدينة 6 أكتوبر.
+                        ابدأ يومك بقهوتك المفضلة، أو أنجز أعمالك بتركيز تام
+                        في بيئة مريحة.
+
+                    </p>
+
+
+                    <div class="space-y-4 pt-2">
+
+                        <!-- ADDRESS -->
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl glass-panel">
+
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-xl shrink-0 font-bold shadow-lg">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4 class="font-bold text-white text-base">
+                                    العنوان
+                                </h4>
+
+                                <p class="text-sm text-gray-300">
+                                    كواترو كافيه، المحور المركزي، مدينة 6 أكتوبر، الجيزة
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl glass-panel">
+
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-xl shrink-0 font-bold shadow-lg">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4 class="font-bold text-white text-base">
+                                    الهاتف والاستفسارات
+                                </h4>
+
+                                <a href="tel:01061020623"
+                                   class="text-sm text-amber-400 font-black hover:underline font-en">
+                                    01061020623
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- WHATSAPP -->
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl glass-panel">
+
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center text-black text-xl shrink-0 font-bold shadow-lg">
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4 class="font-bold text-white text-base">
+                                    حجز مساحات العمل عبر واتساب
+                                </h4>
+
+                                <a href="https://wa.me/201061020623"
+                                   target="_blank"
+                                   class="text-sm text-green-400 font-bold hover:underline">
+                                    تحدث معنا مباشرة على واتساب
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MAP -->
+
+                <div class="glass-panel p-4 rounded-3xl border border-amber-500/30 overflow-hidden h-96 flex flex-col justify-center items-center text-center relative group">
+
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=1000"
+                         class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0C0503] via-[#0C0503]/80 to-transparent"></div>
+
+
+                    <div class="relative z-10 space-y-4 p-6">
+
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-3xl mx-auto shadow-xl animate-bounce">
+
+                            <i class="fa-solid fa-map-pin"></i>
+
+                        </div>
+
+                        <h3 class="text-2xl font-black text-white">
+                            Quattro Cafè 6th of October
+                        </h3>
+
+                        <p class="text-sm text-gray-300 font-medium">
+                            المحور المركزي - موقع متميز وسهل الوصول
+                        </p>
+
+                        <a href="https://maps.google.com/?q=6th+of+October+City"
+                           target="_blank"
+                           class="inline-block bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-black font-black text-sm px-6 py-3 rounded-xl transition-all shadow-lg shadow-amber-500/20 hover:scale-105">
+
+                            افتح الموقع في خرائط جوجل
+
+                            <i class="fa-solid fa-location-arrow mr-1"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="border-t border-amber-500/20 bg-[#060201] py-10 relative">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+                <div class="flex items-center gap-3">
+
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black font-bold">
+
+                        <i class="fa-solid fa-mug-hot"></i>
+
+                    </div>
+
+                    <span class="text-xl font-black text-white tracking-wider font-en">
+                        QUATTRO CAFÈ
+                    </span>
+
+                </div>
+
 
                 <div class="text-xs text-gray-400 text-center space-y-1">
-                    <p>© 2026 جميع الحقوق محفوظة لـ Quattro Cafè & Co-Working Space.</p>
-                    <p class="text-amber-400 font-bold">* ملاحظة: جميع الأسعار لا تشمل 12% رسوم الخدمة.</p>
+
+                    <p>
+                        © 2026 جميع الحقوق محفوظة لـ Quattro Cafè & Co-Working Space.
+                    </p>
+
+                    <p class="text-amber-400 font-bold">
+                        * ملاحظة: جميع الأسعار لا تشمل 12% رسوم الخدمة.
+                    </p>
+
                 </div>
+
 
                 <div class="flex items-center gap-3">
-                    <a href="https://wa.me/201061020623" target="_blank" class="w-10 h-10 rounded-xl glass-panel hover:bg-amber-400 hover:text-black flex items-center justify-center text-amber-400 transition-all">
+
+                    <a href="https://wa.me/201061020623"
+                       target="_blank"
+                       class="w-10 h-10 rounded-xl glass-panel hover:bg-amber-400 hover:text-black flex items-center justify-center text-amber-400 transition-all">
+
                         <i class="fa-brands fa-whatsapp text-lg"></i>
+
                     </a>
-                    <a href="tel:01061020623" class="w-10 h-10 rounded-xl glass-panel hover:bg-amber-400 hover:text-black flex items-center justify-center text-amber-400 transition-all">
+
+                    <a href="tel:01061020623"
+                       class="w-10 h-10 rounded-xl glass-panel hover:bg-amber-400 hover:text-black flex items-center justify-center text-amber-400 transition-all">
+
                         <i class="fa-solid fa-phone text-lg"></i>
+
                     </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
 
-    <!-- جافاسكريبت المنيو والتفاعل -->
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
     <script>
+
         const menuItems = [
+
             // Hot Coffees
+
             { nameEn: "Turkish Coffee", nameAr: "قهوة تركية", price: 30, cat: "hot-coffee" },
             { nameEn: "Double Turkish Coffee", nameAr: "قهوة تركية دبل", price: 35, cat: "hot-coffee" },
             { nameEn: "Espresso (1 shot)", nameAr: "إسبريسو 1 شوت", price: 35, cat: "hot-coffee" },
@@ -451,7 +1187,9 @@
             { nameEn: "Caffè Mocha", nameAr: "قهوة موكا", price: 50, cat: "hot-coffee" },
             { nameEn: "White Mocha", nameAr: "موكا بيضاء", price: 50, cat: "hot-coffee" },
 
-            // Hot Drinks & Teas
+
+            // Hot Drinks
+
             { nameEn: "Tea", nameAr: "شاي", price: 20, cat: "hot-drinks" },
             { nameEn: "Tea Latte", nameAr: "شاي بالحليب", price: 30, cat: "hot-drinks" },
             { nameEn: "Steamed Milk", nameAr: "حليب مبخر", price: 30, cat: "hot-drinks" },
@@ -465,7 +1203,9 @@
             { nameEn: "Plain Sahlab", nameAr: "سحلب سادة", price: 35, cat: "hot-drinks" },
             { nameEn: "Sahlab with Nuts", nameAr: "سحلب بالمكسرات", price: 45, cat: "hot-drinks" },
 
-            // Cold Coffees
+
+            // Cold Coffee
+
             { nameEn: "Cold Brew Coffee", nameAr: "قهوة كولد برو", price: 40, cat: "cold-coffee" },
             { nameEn: "Iced Latte", nameAr: "لاتيه مثلج", price: 45, cat: "cold-coffee" },
             { nameEn: "Iced Spanish Latte", nameAr: "سبانيش لاتيه مثلج", price: 50, cat: "cold-coffee" },
@@ -473,7 +1213,9 @@
             { nameEn: "Iced Mocha", nameAr: "موكا مثلجة", price: 50, cat: "cold-coffee" },
             { nameEn: "Iced White Mocha", nameAr: "موكا بيضاء مثلجة", price: 50, cat: "cold-coffee" },
 
+
             // Smoothies
+
             { nameEn: "Green Apple Smoothie", nameAr: "سموزي تفاح أخضر", price: 49, cat: "smoothies" },
             { nameEn: "Kiwi Smoothie", nameAr: "سموزي كيوي", price: 49, cat: "smoothies" },
             { nameEn: "Orange Smoothie", nameAr: "سموزي برتقال", price: 49, cat: "smoothies" },
@@ -482,21 +1224,102 @@
             { nameEn: "Blueberry Smoothie", nameAr: "سموزي توت أزرق", price: 49, cat: "smoothies" },
             { nameEn: "Lemon with Mint Smoothie", nameAr: "سموزي ليمون نعناع", price: 49, cat: "smoothies" },
 
-            // Cocktails & Cold Drinks
-            { nameEn: "Florida", nameAr: "فلوريدا", desc: "مانجو, فراولة, جوافة / Mango, Strawberry, Guava", price: 64, cat: "cocktails" },
-            { nameEn: "Mango & Kiwi Cocktail", nameAr: "مانجو كيوي", price: 64, cat: "cocktails" },
-            { nameEn: "Cherry Cola", nameAr: "شيري كولا", price: 54, cat: "cocktails" },
-            { nameEn: "Piña Colada", nameAr: "بينا كولادا", desc: "أناناس, جوز هند, فانيليا / Pineapple, Coconut, Vanilla", price: 55, cat: "cocktails" },
-            { nameEn: "Sunshine", nameAr: "صن شاين", desc: "نعناع, صودا, ليمون, رمان / Mint, Soda, Lemon, Pomegranate", price: 54, cat: "cocktails" },
-            { nameEn: "Sunset", nameAr: "صن سيت", desc: "أناناس, صودا, برتقال / Pineapple, Soda, Orange", price: 54, cat: "cocktails" },
-            { nameEn: "Blue Sky", nameAr: "بلو سكاي", desc: "نكهة قشر البرتقال, صودا / Orange Peel Flavor, Soda", price: 54, cat: "cocktails" },
-            { nameEn: "Mojito", nameAr: "موهيتو", desc: "نعناع أبيض, صودا, ليمون / White Mint, Soda, Lemon", price: 49, cat: "cocktails" },
-            { nameEn: "Small Water", nameAr: "مياه صغيرة", price: 9, cat: "cocktails" },
-            { nameEn: "Soft Drinks", nameAr: "مشروبات غازية", price: 25, cat: "cocktails" },
-            { nameEn: "Schweppes", nameAr: "شويبس", price: 28, cat: "cocktails" },
-            { nameEn: "Red Bull", nameAr: "ريد بول", price: 54, cat: "cocktails" },
 
-            // Fresh Juices
+            // Cocktails
+
+            {
+                nameEn: "Florida",
+                nameAr: "فلوريدا",
+                desc: "مانجو, فراولة, جوافة / Mango, Strawberry, Guava",
+                price: 64,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Mango & Kiwi Cocktail",
+                nameAr: "مانجو كيوي",
+                price: 64,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Cherry Cola",
+                nameAr: "شيري كولا",
+                price: 54,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Piña Colada",
+                nameAr: "بينا كولادا",
+                desc: "أناناس, جوز هند, فانيليا / Pineapple, Coconut, Vanilla",
+                price: 55,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Sunshine",
+                nameAr: "صن شاين",
+                desc: "نعناع, صودا, ليمون, رمان / Mint, Soda, Lemon, Pomegranate",
+                price: 54,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Sunset",
+                nameAr: "صن سيت",
+                desc: "أناناس, صودا, برتقال / Pineapple, Soda, Orange",
+                price: 54,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Blue Sky",
+                nameAr: "بلو سكاي",
+                desc: "نكهة قشر البرتقال, صودا / Orange Peel Flavor, Soda",
+                price: 54,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Mojito",
+                nameAr: "موهيتو",
+                desc: "نعناع أبيض, صودا, ليمون / White Mint, Soda, Lemon",
+                price: 49,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Small Water",
+                nameAr: "مياه صغيرة",
+                price: 9,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Soft Drinks",
+                nameAr: "مشروبات غازية",
+                price: 25,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Schweppes",
+                nameAr: "شويبس",
+                price: 28,
+                cat: "cocktails"
+            },
+
+            {
+                nameEn: "Red Bull",
+                nameAr: "ريد بول",
+                price: 54,
+                cat: "cocktails"
+            },
+
+
+            // Juices
+
             { nameEn: "Lemon Mint Juice", nameAr: "عصير ليمون نعناع", price: 40, cat: "juices" },
             { nameEn: "Mango Juice", nameAr: "عصير مانجو", price: 50, cat: "juices" },
             { nameEn: "Strawberry Juice", nameAr: "عصير فراولة", price: 50, cat: "juices" },
@@ -504,109 +1327,353 @@
             { nameEn: "Orange Juice", nameAr: "عصير برتقال", price: 50, cat: "juices" },
             { nameEn: "Peach Juice", nameAr: "عصير خوخ", price: 50, cat: "juices" },
 
-            // Milkshakes & Frappes
-            { nameEn: "Milkshake", nameAr: "ميلك شيك", desc: "شوكولاتة، فراولة، مانجو، فانيليا، كراميل، تفاح أخضر، باشن فروت، توت، أوريو، لوتس، هوهوز، توينكيز", price: 54, cat: "frappes" },
-            { nameEn: "Frappe", nameAr: "فرابيه", desc: "قهوة، موكا، شوكولاتة، شوكولاتة بيضاء، فانيليا، كراميل، ريد فيلفيت", price: 49, cat: "frappes" },
 
-            // Breakfast & Food
-            { nameEn: "Classic Breakfast", nameAr: "إفطار كلاسيك", desc: "كرواسون، زبدة، مربى، مشروب ساخن", price: 70, cat: "food" },
-            { nameEn: "French Style Breakfast", nameAr: "إفطار فرنسي", desc: "كرواسون، زبدة، مربى، مشروب ساخن، أومليت", price: 90, cat: "food" },
-            { nameEn: "The Real Style Breakfast", nameAr: "إفطار ذا ريل ستايل", desc: "كرواسون، زبدة، مربى، مشروب ساخن، أومليت، بان كيك", price: 120, cat: "food" },
-            { nameEn: "Plain Croissant", nameAr: "كرواسون سادة", price: 35, cat: "food" },
-            { nameEn: "Mix Cheese Croissant", nameAr: "كرواسون جبن مشكلة", price: 45, cat: "food" },
-            { nameEn: "Buffalo Mozzarella Croissant", nameAr: "كرواسون بافلو موزاريلا", price: 45, cat: "food" },
-            { nameEn: "Smoked Turkey Croissant", nameAr: "كرواسون رومي مدخن", price: 50, cat: "food" },
-            { nameEn: "Roast Beef Croissant", nameAr: "كرواسون شرائح لحم", price: 50, cat: "food" },
-            { nameEn: "Club Sandwich", nameAr: "كلوب ساندويتش", price: 60, cat: "food" },
-            { nameEn: "Chicken Caesar Salad", nameAr: "سلطة سيزر الدجاج", price: 75, cat: "food" },
-            { nameEn: "Sweet Corn Salad", nameAr: "سلطة ذرة حلوة", price: 60, cat: "food" },
+            // Milkshakes
+
+            {
+                nameEn: "Milkshake",
+                nameAr: "ميلك شيك",
+                desc: "شوكولاتة، فراولة، مانجو، فانيليا، كراميل، تفاح أخضر، باشن فروت، توت، أوريو، لوتس، هوهوز، توينكيز",
+                price: 54,
+                cat: "frappes"
+            },
+
+            {
+                nameEn: "Frappe",
+                nameAr: "فرابيه",
+                desc: "قهوة، موكا، شوكولاتة، شوكولاتة بيضاء، فانيليا، كراميل، ريد فيلفيت",
+                price: 49,
+                cat: "frappes"
+            },
+
+
+            // Food
+
+            {
+                nameEn: "Classic Breakfast",
+                nameAr: "إفطار كلاسيك",
+                desc: "كرواسون، زبدة، مربى، مشروب ساخن",
+                price: 70,
+                cat: "food"
+            },
+
+            {
+                nameEn: "French Style Breakfast",
+                nameAr: "إفطار فرنسي",
+                desc: "كرواسون، زبدة، مربى، مشروب ساخن، أومليت",
+                price: 90,
+                cat: "food"
+            },
+
+            {
+                nameEn: "The Real Style Breakfast",
+                nameAr: "إفطار ذا ريل ستايل",
+                desc: "كرواسون، زبدة، مربى، مشروب ساخن، أومليت، بان كيك",
+                price: 120,
+                cat: "food"
+            },
+
+            {
+                nameEn: "Plain Croissant",
+                nameAr: "كرواسون سادة",
+                price: 35,
+                cat: "food"
+            },
+
+            {
+                nameEn: "Mix Cheese Croissant",
+                nameAr: "كرواسون جبن مشكلة",
+                price: 45,
+                cat: "food"
+            },
+
+            {
+                nameEn: "Buffalo Mozzarella Croissant",
+                nameAr: "كرواسون بافلو موزاريلا",
+                price: 45,
+                cat: "food"
+            },
+
+            {
+                nameEn: "Smoked Turkey Croissant",
+                nameAr: "كرواسون رومي مدخن",
+                price: 50,
+                cat: "food"
+            },
+
+            {
+                nameEn: "Roast Beef Croissant",
+                nameAr: "كرواسون شرائح لحم",
+                price: 50,
+                cat: "food"
+            },
+
+            {
+                nameEn: "Club Sandwich",
+                nameAr: "كلوب ساندويتش",
+                price: 60,
+                cat: "food"
+            },
+
+            {
+                nameEn: "Chicken Caesar Salad",
+                nameAr: "سلطة سيزر الدجاج",
+                price: 75,
+                cat: "food"
+            },
+
+            {
+                nameEn: "Sweet Corn Salad",
+                nameAr: "سلطة ذرة حلوة",
+                price: 60,
+                cat: "food"
+            },
+
 
             // Desserts
-            { nameEn: "Cheesecake", nameAr: "تشيز كيك", price: 45, cat: "desserts" },
-            { nameEn: "Molten Cake", nameAr: "مولتن كيك", price: 55, cat: "desserts" },
-            { nameEn: "Pancake", nameAr: "بان كيك", price: 40, cat: "desserts" },
-            { nameEn: "Cookies", nameAr: "كوكيز", price: 20, cat: "desserts" },
-            { nameEn: "Ice Cream (1 Scoop)", nameAr: "آيس كريم (1 بوله)", price: 15, cat: "desserts" }
+
+            {
+                nameEn: "Cheesecake",
+                nameAr: "تشيز كيك",
+                price: 45,
+                cat: "desserts"
+            },
+
+            {
+                nameEn: "Molten Cake",
+                nameAr: "مولتن كيك",
+                price: 55,
+                cat: "desserts"
+            },
+
+            {
+                nameEn: "Pancake",
+                nameAr: "بان كيك",
+                price: 40,
+                cat: "desserts"
+            },
+
+            {
+                nameEn: "Cookies",
+                nameAr: "كوكيز",
+                price: 20,
+                cat: "desserts"
+            },
+
+            {
+                nameEn: "Ice Cream (1 Scoop)",
+                nameAr: "آيس كريم (1 بوله)",
+                price: 15,
+                cat: "desserts"
+            }
+
         ];
+
 
         let activeCategory = 'all';
 
+
         const menuGrid = document.getElementById('menu-grid');
+
         const searchInput = document.getElementById('menu-search');
+
         const noResults = document.getElementById('no-results');
+
         const tabButtons = document.querySelectorAll('.tab-btn');
 
+
         function renderMenu() {
-            const searchQuery = searchInput.value.toLowerCase().trim();
+
+            const searchQuery =
+                searchInput.value.toLowerCase().trim();
+
             menuGrid.innerHTML = '';
-            
+
+
             const filteredItems = menuItems.filter(item => {
-                const matchesCategory = activeCategory === 'all' || item.cat === activeCategory;
-                const matchesSearch = item.nameEn.toLowerCase().includes(searchQuery) || 
-                                      item.nameAr.includes(searchQuery) || 
-                                      (item.desc && item.desc.toLowerCase().includes(searchQuery));
+
+                const matchesCategory =
+                    activeCategory === 'all' ||
+                    item.cat === activeCategory;
+
+                const matchesSearch =
+                    item.nameEn.toLowerCase().includes(searchQuery) ||
+                    item.nameAr.includes(searchQuery) ||
+                    (item.desc &&
+                     item.desc.toLowerCase().includes(searchQuery));
+
                 return matchesCategory && matchesSearch;
+
             });
+
 
             if (filteredItems.length === 0) {
+
                 noResults.classList.remove('hidden');
+
             } else {
+
                 noResults.classList.add('hidden');
+
+
                 filteredItems.forEach(item => {
+
                     const card = document.createElement('div');
-                    card.className = 'glass-panel p-5 rounded-3xl card-hover-glow flex flex-col justify-between group relative overflow-hidden';
-                    
+
+
+                    card.className =
+                        'glass-panel p-5 rounded-3xl card-hover-glow flex flex-col justify-between group relative overflow-hidden';
+
+
                     card.innerHTML = `
+
                         <div class="space-y-3 relative z-10">
+
                             <div class="flex items-start justify-between gap-3">
-                                <h3 class="font-black text-lg text-white group-hover:text-amber-400 transition-colors">${item.nameAr}</h3>
+
+                                <h3 class="font-black text-lg text-white group-hover:text-amber-400 transition-colors">
+                                    ${item.nameAr}
+                                </h3>
+
                                 <div class="text-left shrink-0">
-                                    <span class="text-amber-400 font-black text-xl font-en">${item.price}</span>
-                                    <span class="text-[10px] text-amber-300 font-bold block -mt-1">EGP</span>
+
+                                    <span class="text-amber-400 font-black text-xl font-en">
+                                        ${item.price}
+                                    </span>
+
+                                    <span class="text-[10px] text-amber-300 font-bold block -mt-1">
+                                        EGP
+                                    </span>
+
                                 </div>
+
                             </div>
-                            <p class="text-xs text-amber-200/80 font-en font-medium">${item.nameEn}</p>
-                            ${item.desc ? `<p class="text-xs text-gray-300 pt-2 leading-relaxed border-t border-amber-500/20 mt-2">${item.desc}</p>` : ''}
+
+
+                            <p class="text-xs text-amber-200/80 font-en font-medium">
+                                ${item.nameEn}
+                            </p>
+
+
+                            ${
+                                item.desc
+                                ?
+                                `<p class="text-xs text-gray-300 pt-2 leading-relaxed border-t border-amber-500/20 mt-2">
+                                    ${item.desc}
+                                </p>`
+                                :
+                                ''
+                            }
+
                         </div>
+
                     `;
+
+
                     menuGrid.appendChild(card);
+
                 });
+
             }
+
         }
 
+
+        /* CATEGORY BUTTONS */
+
         tabButtons.forEach(btn => {
+
             btn.addEventListener('click', () => {
+
                 tabButtons.forEach(b => {
-                    b.classList.remove('bg-gradient-to-r', 'from-amber-400', 'to-orange-500', 'text-black', 'shadow-lg', 'shadow-amber-500/20');
-                    b.classList.add('glass-panel', 'text-white');
+
+                    b.classList.remove(
+                        'bg-gradient-to-r',
+                        'from-amber-400',
+                        'to-orange-500',
+                        'text-black',
+                        'shadow-lg',
+                        'shadow-amber-500/20'
+                    );
+
+                    b.classList.add(
+                        'glass-panel',
+                        'text-white'
+                    );
+
                 });
 
-                btn.classList.remove('glass-panel', 'text-white');
-                btn.classList.add('bg-gradient-to-r', 'from-amber-400', 'to-orange-500', 'text-black', 'shadow-lg', 'shadow-amber-500/20');
 
-                activeCategory = btn.getAttribute('data-cat');
+                btn.classList.remove(
+                    'glass-panel',
+                    'text-white'
+                );
+
+
+                btn.classList.add(
+                    'bg-gradient-to-r',
+                    'from-amber-400',
+                    'to-orange-500',
+                    'text-black',
+                    'shadow-lg',
+                    'shadow-amber-500/20'
+                );
+
+
+                activeCategory =
+                    btn.getAttribute('data-cat');
+
+
                 renderMenu();
+
             });
+
         });
 
-        searchInput.addEventListener('input', renderMenu);
 
-        // الموبايل القائمة
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+        /* SEARCH */
+
+        searchInput.addEventListener(
+            'input',
+            renderMenu
+        );
+
+
+        /* MOBILE MENU */
+
+        const mobileMenuBtn =
+            document.getElementById('mobile-menu-btn');
+
+        const mobileMenu =
+            document.getElementById('mobile-menu');
+
+        const mobileLinks =
+            document.querySelectorAll('.mobile-link');
+
 
         mobileMenuBtn.addEventListener('click', () => {
+
             mobileMenu.classList.toggle('hidden');
+
         });
+
 
         mobileLinks.forEach(link => {
+
             link.addEventListener('click', () => {
+
                 mobileMenu.classList.add('hidden');
+
             });
+
         });
 
+
+        /* INITIAL MENU */
+
         renderMenu();
+
     </script>
+
 </body>
 </html>
