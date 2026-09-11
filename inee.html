@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quattro Cafè | كواترو كافيه وكووركينج سبايس</title>
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <!-- Google Fonts: Cairo & Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,7 +78,6 @@
         .card-hover-glow {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-
         .card-hover-glow:hover {
             transform: translateY(-6px) scale(1.01);
             border-color: rgba(251, 191, 36, 0.6);
@@ -93,22 +89,18 @@
         ::-webkit-scrollbar {
             width: 10px;
         }
-
         ::-webkit-scrollbar-track {
             background: #090302;
         }
-
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(to bottom, #F59E0B, #D97706);
             border-radius: 5px;
         }
-
         ::-webkit-scrollbar-thumb:hover {
             background: #FBBF24;
         }
     </style>
 </head>
-
 <body class="antialiased selection:bg-amber-500 selection:text-black min-h-screen flex flex-col justify-between bg-pattern">
 
     <!-- إضاءة خلفية هادئة جداً وداكنة لعدم التأثير على النص -->
@@ -119,7 +111,6 @@
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-
                 <!-- اللوجو -->
                 <a href="#" class="flex items-center gap-3 group">
                     <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 via-orange-500 to-amber-700 p-[2px] shadow-lg shadow-amber-500/20 group-hover:scale-110 transition-transform">
@@ -127,7 +118,6 @@
                             <i class="fa-solid fa-mug-hot text-amber-400 text-xl group-hover:rotate-12 transition-transform"></i>
                         </div>
                     </div>
-
                     <div>
                         <span class="text-2xl font-black tracking-wider gold-gradient-text font-en block">QUATTRO</span>
                         <span class="text-[10px] tracking-widest text-amber-400 font-bold block -mt-1 uppercase">Cafè & Workspace</span>
@@ -165,7 +155,6 @@
             <a href="#coworking" class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400 border-b border-amber-900/30">مساحة العمل</a>
             <a href="#menu" class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400 border-b border-amber-900/30">المنيو</a>
             <a href="#contact" class="mobile-link block py-2.5 text-base font-bold text-white hover:text-amber-400">تواصل معنا</a>
-
             <div class="pt-2">
                 <a href="tel:01061020623" class="flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-orange-500 text-black font-black py-3 rounded-xl shadow-lg shadow-amber-500/20">
                     <i class="fa-solid fa-phone"></i>
@@ -181,14 +170,12 @@
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
-
                     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-400/40 bg-amber-950/60 text-amber-300 text-xs sm:text-sm font-extrabold shadow-lg backdrop-blur-md">
                         <i class="fa-solid fa-sparkles text-amber-400"></i>
                         <span>المكان الأفخم والأكثر حيوية في مدينة 6 أكتوبر</span>
                     </div>
                     
-                    <!-- التعديل الوحيد هنا: text-white أصبح text-[#3b2418] -->
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#3b2418] leading-[1.25]">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.25]">
                         مساحة عمل ملهمة للابتكار والإنجاز مع <span class="gold-gradient-text">القهوة المختصة</span>
                     </h1>
 
@@ -200,7 +187,6 @@
                         <a href="#menu" class="w-full sm:w-auto text-center bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-black font-black px-8 py-4 rounded-xl transition-all shadow-xl shadow-amber-500/20 text-base transform hover:-translate-y-1">
                             استكشف المنيو الكامل <i class="fa-solid fa-arrow-left mr-2"></i>
                         </a>
-
                         <a href="https://wa.me/201061020623?text=مرحباً%20كواترو%20كافيه،%20أريد%20حجز%20مكتب/مساحة%20عمل." target="_blank" class="w-full sm:w-auto text-center border border-amber-500/50 hover:border-amber-400 bg-amber-950/50 hover:bg-amber-900/80 text-white font-bold px-8 py-4 rounded-xl transition-all text-base backdrop-blur-md">
                             احجز مكانك الآن <i class="fa-brands fa-whatsapp ml-2 text-green-400 text-lg"></i>
                         </a>
@@ -208,62 +194,45 @@
 
                     <!-- مميزات سريعة -->
                     <div class="pt-8 grid grid-cols-3 gap-4 border-t border-amber-500/20 text-center lg:text-right">
-
                         <div class="p-3 rounded-2xl glass-panel">
                             <p class="text-xl sm:text-2xl font-black text-amber-400">100%</p>
                             <p class="text-xs text-gray-300 font-bold">حبوب أرابيكا فاخرة</p>
                         </div>
-
                         <div class="p-3 rounded-2xl glass-panel">
                             <p class="text-xl sm:text-2xl font-black text-amber-400">إنترنت فائـق</p>
                             <p class="text-xs text-gray-300 font-bold">سرعة عالية للعمل</p>
                         </div>
-
                         <div class="p-3 rounded-2xl glass-panel">
                             <p class="text-xl sm:text-2xl font-black text-amber-400">بيئة مجهزة</p>
                             <p class="text-xs text-gray-300 font-bold">وصلات لكل مكتب</p>
                         </div>
-
                     </div>
                 </div>
 
                 <!-- صورة / كارت البانر -->
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="relative w-full max-w-md group">
-
                         <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-700 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-500"></div>
                         
                         <div class="glass-panel p-5 rounded-3xl relative z-10 space-y-5">
-
                             <div class="relative h-72 rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl">
-
                                 <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1000" alt="Quattro Cafe Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
-
                                 <div class="absolute bottom-4 right-4 left-4 z-20">
-                                    <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-black text-xs font-black px-3 py-1 rounded-full shadow-lg inline-block mb-1">
-                                        المشروب الأشهر
-                                    </span>
-
-                                    <h3 class="text-xl font-bold text-white">
-                                        V60 & Specialty Cold Brew
-                                    </h3>
+                                    <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-black text-xs font-black px-3 py-1 rounded-full shadow-lg inline-block mb-1">المشروب الأشهر</span>
+                                    <h3 class="text-xl font-bold text-white">V60 & Specialty Cold Brew</h3>
                                 </div>
                             </div>
 
                             <div class="flex items-center justify-between text-xs sm:text-sm text-gray-200 border-t border-amber-500/20 pt-3 px-1 font-bold">
-
                                 <div class="flex items-center gap-2 text-amber-400">
                                     <i class="fa-solid fa-bolt"></i>
                                     <span>وصلات كهرباء لكل مكتب</span>
                                 </div>
-
                                 <div class="flex items-center gap-2 text-amber-400">
                                     <i class="fa-solid fa-clock"></i>
                                     <span>مفتوح يومياً</span>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -275,174 +244,82 @@
 
     <!-- مميزات المكان ومساحة العمل -->
     <section id="about" class="py-20 relative">
-
         <div id="coworking" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
-
-                <span class="text-amber-400 font-black text-sm tracking-wider uppercase">
-                    لماذا تختار كواترو؟
-                </span>
-
-                <h2 class="text-3xl sm:text-4xl font-black text-white">
-                    صُمم لجمع <span class="gold-gradient-text">التركيز والرفاهية</span>
-                </h2>
-
-                <p class="text-gray-300 text-sm sm:text-base">
-                    سواء كنت تريد إنهاء مشروع عمل، المذاكرة للامتحانات، أو الاستمتاع بقهوة مختصة مع أصدقائك.
-                </p>
-
+                <span class="text-amber-400 font-black text-sm tracking-wider uppercase">لماذا تختار كواترو؟</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white">صُمم لجمع <span class="gold-gradient-text">التركيز والرفاهية</span></h2>
+                <p class="text-gray-300 text-sm sm:text-base">سواء كنت تريد إنهاء مشروع عمل، المذاكرة للامتحانات، أو الاستمتاع بقهوة مختصة مع أصدقائك.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
                 <!-- كارت 1 -->
                 <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
-
                     <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
                         <i class="fa-solid fa-wifi"></i>
                     </div>
-
-                    <h3 class="text-xl font-black text-white">
-                        واي فاي ألياف ضوئية
-                    </h3>
-
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        إنترنت فائق السرعة ومستقر يضمن لك إجراء المكالمات والاجتماعات أونلاين وإنجاز عملك بدون انقطاع.
-                    </p>
-
+                    <h3 class="text-xl font-black text-white">واي فاي ألياف ضوئية</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">إنترنت فائق السرعة ومستقر يضمن لك إجراء المكالمات والاجتماعات أونلاين وإنجاز عملك بدون انقطاع.</p>
                 </div>
 
                 <!-- كارت 2 -->
                 <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
-
                     <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
                         <i class="fa-solid fa-mug-hot"></i>
                     </div>
-
-                    <h3 class="text-xl font-black text-white">
-                        قهوة مختصة واستثنائية
-                    </h3>
-
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        حبوب قهوة نقية ومحمصة بعناية، تقنيات تقطير احترافية V60، ومشروبات لاتيه مميزة ومبتكرة.
-                    </p>
-
+                    <h3 class="text-xl font-black text-white">قهوة مختصة واستثنائية</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">حبوب قهوة نقية ومحمصة بعناية، تقنيات تقطير احترافية V60، ومشروبات لاتيه مميزة ومبتكرة.</p>
                 </div>
 
                 <!-- كارت 3 -->
                 <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
-
                     <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
                         <i class="fa-solid fa-laptop-code"></i>
                     </div>
-
-                    <h3 class="text-xl font-black text-white">
-                        أماكن عمل مريحة وهادئة
-                    </h3>
-
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        كراسي مريحة للظهر، إضاءات مدروسة للتركيز، ومنافذ كهرباء متوفرة بكل سهولة بجانب كل مقعد.
-                    </p>
-
+                    <h3 class="text-xl font-black text-white">أماكن عمل مريحة وهادئة</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">كراسي مريحة للظهر، إضاءات مدروسة للتركيز، ومنافذ كهرباء متوفرة بكل سهولة بجانب كل مقعد.</p>
                 </div>
 
                 <!-- كارت 4 -->
                 <div class="glass-panel p-6 rounded-3xl card-hover-glow space-y-4">
-
                     <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/20">
                         <i class="fa-solid fa-utensils"></i>
                     </div>
-
-                    <h3 class="text-xl font-black text-white">
-                        مخبوزات ووجبات طازجة
-                    </h3>
-
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        تشكيلة يومية من الكرواسون المخبوز طازجاً، الساندوتشات المميزة، والحلويات الغنية لإنعاش يومك.
-                    </p>
-
+                    <h3 class="text-xl font-black text-white">مخبوزات ووجبات طازجة</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">تشكيلة يومية من الكرواسون المخبوز طازجاً، الساندوتشات المميزة، والحلويات الغنية لإنعاش يومك.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- المنيو التفاعلي -->
     <section id="menu" class="py-20 relative">
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 border-b border-amber-500/20 pb-8">
-
                 <div>
-                    <span class="text-amber-400 font-black text-sm tracking-wider uppercase">
-                        قائمة المشروبات والأطعمة
-                    </span>
-
-                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">
-                        استكشف <span class="gold-gradient-text">المنيو الكامل</span>
-                    </h2>
+                    <span class="text-amber-400 font-black text-sm tracking-wider uppercase">قائمة المشروبات والأطعمة</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">استكشف <span class="gold-gradient-text">المنيو الكامل</span></h2>
                 </div>
 
                 <!-- مربع البحث -->
                 <div class="relative w-full md:w-80">
-
-                    <input
-                        type="text"
-                        id="menu-search"
-                        placeholder="ابحث باسم المشروب أو الأكلة..."
-                        class="w-full bg-[#180A05] border border-amber-500/40 focus:border-amber-400 rounded-xl px-4 py-3 pr-10 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400/30 transition-all"
-                    >
-
+                    <input type="text" id="menu-search" placeholder="ابحث باسم المشروب أو الأكلة..." 
+                        class="w-full bg-[#180A05] border border-amber-500/40 focus:border-amber-400 rounded-xl px-4 py-3 pr-10 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400/30 transition-all">
                     <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3.5 text-amber-400"></i>
-
                 </div>
             </div>
 
             <!-- أزرار التصفية -->
             <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-8 text-sm" id="category-tabs">
-
-                <button data-cat="all" class="tab-btn active px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap bg-gradient-to-r from-amber-400 to-orange-500 text-black shadow-lg shadow-amber-500/20">
-                    الكل
-                </button>
-
-                <button data-cat="hot-coffee" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
-                    قهوة ساخنة
-                </button>
-
-                <button data-cat="hot-drinks" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
-                    مشروبات ساخنة وشاي
-                </button>
-
-                <button data-cat="cold-coffee" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
-                    قهوة باردة
-                </button>
-
-                <button data-cat="smoothies" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
-                    سموزي
-                </button>
-
-                <button data-cat="cocktails" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
-                    كوكتيلات ومشروبات باردة
-                </button>
-
-                <button data-cat="juices" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
-                    عصائر طازجة
-                </button>
-
-                <button data-cat="frappes" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
-                    ميلك شيك وفرابيه
-                </button>
-
-                <button data-cat="food" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
-                    إفطار وأطعمة
-                </button>
-
-                <button data-cat="desserts" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">
-                    حلويات وآيس كريم
-                </button>
-
+                <button data-cat="all" class="tab-btn active px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap bg-gradient-to-r from-amber-400 to-orange-500 text-black shadow-lg shadow-amber-500/20">الكل</button>
+                <button data-cat="hot-coffee" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">قهوة ساخنة</button>
+                <button data-cat="hot-drinks" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">مشروبات ساخنة وشاي</button>
+                <button data-cat="cold-coffee" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">قهوة باردة</button>
+                <button data-cat="smoothies" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">سموزي</button>
+                <button data-cat="cocktails" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">كوكتيلات ومشروبات باردة</button>
+                <button data-cat="juices" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">عصائر طازجة</button>
+                <button data-cat="frappes" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">ميلك شيك وفرابيه</button>
+                <button data-cat="food" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">إفطار وأطعمة</button>
+                <button data-cat="desserts" class="tab-btn px-6 py-2.5 rounded-xl font-extrabold transition-all whitespace-nowrap glass-panel text-white hover:border-amber-400">حلويات وآيس كريم</button>
             </div>
 
             <!-- شبكة عرض العناصر -->
@@ -452,183 +329,107 @@
 
             <!-- حالة عدم وجود نتائج -->
             <div id="no-results" class="hidden text-center py-16 space-y-3">
-
                 <i class="fa-solid fa-mug-hot text-5xl text-amber-500/40"></i>
-
-                <p class="text-gray-300 text-lg font-bold">
-                    لم نجد أي صنف يطابق بحثك الحالي.
-                </p>
-
+                <p class="text-gray-300 text-lg font-bold">لم نجد أي صنف يطابق بحثك الحالي.</p>
             </div>
-
         </div>
     </section>
 
     <!-- التواصل والموقع -->
     <section id="contact" class="py-20 relative border-t border-amber-500/20">
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-
                 <div class="space-y-6">
-
-                    <span class="text-amber-400 font-black text-sm tracking-wider uppercase">
-                        زورنا اليوم
-                    </span>
-
-                    <h2 class="text-3xl sm:text-4xl font-black text-white">
-                        المكان المثالي لإنتاجيتك وراحتك
-                    </h2>
-
+                    <span class="text-amber-400 font-black text-sm tracking-wider uppercase">زورنا اليوم</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white">المكان المثالي لإنتاجيتك وراحتك</h2>
                     <p class="text-gray-300 leading-relaxed">
                         نرحب بك في كواترو كافيه بقلب مدينة 6 أكتوبر. ابدأ يومك بقهوتك المفضلة، أو أنجز أعمالك بتركيز تام في بيئة مريحة.
                     </p>
 
                     <div class="space-y-4 pt-2">
-
                         <div class="flex items-start gap-4 p-4 rounded-2xl glass-panel">
-
                             <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-xl shrink-0 font-bold shadow-lg">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
-
                             <div>
                                 <h4 class="font-bold text-white text-base">العنوان</h4>
-                                <p class="text-sm text-gray-300">
-                                    كواترو كافيه، المحور المركزي، مدينة 6 أكتوبر، الجيزة
-                                </p>
+                                <p class="text-sm text-gray-300">كواترو كافيه، المحور المركزي، مدينة 6 أكتوبر، الجيزة</p>
                             </div>
-
                         </div>
 
                         <div class="flex items-start gap-4 p-4 rounded-2xl glass-panel">
-
                             <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-xl shrink-0 font-bold shadow-lg">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
-
                             <div>
-                                <h4 class="font-bold text-white text-base">
-                                    الهاتف والاستفسارات
-                                </h4>
-
-                                <a href="tel:01061020623" class="text-sm text-amber-400 font-black hover:underline font-en">
-                                    01061020623
-                                </a>
+                                <h4 class="font-bold text-white text-base">الهاتف والاستفسارات</h4>
+                                <a href="tel:01061020623" class="text-sm text-amber-400 font-black hover:underline font-en">01061020623</a>
                             </div>
-
                         </div>
 
                         <div class="flex items-start gap-4 p-4 rounded-2xl glass-panel">
-
                             <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center text-black text-xl shrink-0 font-bold shadow-lg">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </div>
-
                             <div>
-                                <h4 class="font-bold text-white text-base">
-                                    حجز مساحات العمل عبر واتساب
-                                </h4>
-
-                                <a href="https://wa.me/201061020623" target="_blank" class="text-sm text-green-400 font-bold hover:underline">
-                                    تحدث معنا مباشرة على واتساب
-                                </a>
+                                <h4 class="font-bold text-white text-base">حجز مساحات العمل عبر واتساب</h4>
+                                <a href="https://wa.me/201061020623" target="_blank" class="text-sm text-green-400 font-bold hover:underline">تحدث معنا مباشرة على واتساب</a>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
 
                 <!-- خريطة توضيحية -->
                 <div class="glass-panel p-4 rounded-3xl border border-amber-500/30 overflow-hidden h-96 flex flex-col justify-center items-center text-center relative group">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=1000"
-                        class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700"
-                    >
-
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0C0503] via-[#0C0503]/80 to-transparent"></div>
-
+                    
                     <div class="relative z-10 space-y-4 p-6">
-
                         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-3xl mx-auto shadow-xl animate-bounce">
                             <i class="fa-solid fa-map-pin"></i>
                         </div>
-
-                        <h3 class="text-2xl font-black text-white">
-                            Quattro Cafè 6th of October
-                        </h3>
-
-                        <p class="text-sm text-gray-300 font-medium">
-                            المحور المركزي - موقع متميز وسهل الوصول
-                        </p>
-
+                        <h3 class="text-2xl font-black text-white">Quattro Cafè 6th of October</h3>
+                        <p class="text-sm text-gray-300 font-medium">المحور المركزي - موقع متميز وسهل الوصول</p>
                         <a href="https://maps.google.com/?q=6th+of+October+City" target="_blank" class="inline-block bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-black font-black text-sm px-6 py-3 rounded-xl transition-all shadow-lg shadow-amber-500/20 hover:scale-105">
-                            افتح الموقع في خرائط جوجل
-                            <i class="fa-solid fa-location-arrow mr-1"></i>
+                            افتح الموقع في خرائط جوجل <i class="fa-solid fa-location-arrow mr-1"></i>
                         </a>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- الفوتر -->
     <footer class="border-t border-amber-500/20 bg-[#060201] py-10 relative">
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-
                 <div class="flex items-center gap-3">
-
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black font-bold">
                         <i class="fa-solid fa-mug-hot"></i>
                     </div>
-
-                    <span class="text-xl font-black text-white tracking-wider font-en">
-                        QUATTRO CAFÈ
-                    </span>
-
+                    <span class="text-xl font-black text-white tracking-wider font-en">QUATTRO CAFÈ</span>
                 </div>
 
                 <div class="text-xs text-gray-400 text-center space-y-1">
-
-                    <p>
-                        © 2026 جميع الحقوق محفوظة لـ Quattro Cafè & Co-Working Space.
-                    </p>
-
-                    <p class="text-amber-400 font-bold">
-                        * ملاحظة: جميع الأسعار لا تشمل 12% رسوم الخدمة.
-                    </p>
-
+                    <p>© 2026 جميع الحقوق محفوظة لـ Quattro Cafè & Co-Working Space.</p>
+                    <p class="text-amber-400 font-bold">* ملاحظة: جميع الأسعار لا تشمل 12% رسوم الخدمة.</p>
                 </div>
 
                 <div class="flex items-center gap-3">
-
                     <a href="https://wa.me/201061020623" target="_blank" class="w-10 h-10 rounded-xl glass-panel hover:bg-amber-400 hover:text-black flex items-center justify-center text-amber-400 transition-all">
                         <i class="fa-brands fa-whatsapp text-lg"></i>
                     </a>
-
                     <a href="tel:01061020623" class="w-10 h-10 rounded-xl glass-panel hover:bg-amber-400 hover:text-black flex items-center justify-center text-amber-400 transition-all">
                         <i class="fa-solid fa-phone text-lg"></i>
                     </a>
-
                 </div>
-
             </div>
         </div>
     </footer>
 
     <!-- جافاسكريبت المنيو والتفاعل -->
     <script>
-
         const menuItems = [
-
             // Hot Coffees
             { nameEn: "Turkish Coffee", nameAr: "قهوة تركية", price: 30, cat: "hot-coffee" },
             { nameEn: "Double Turkish Coffee", nameAr: "قهوة تركية دبل", price: 35, cat: "hot-coffee" },
@@ -736,117 +537,54 @@
         const tabButtons = document.querySelectorAll('.tab-btn');
 
         function renderMenu() {
-
             const searchQuery = searchInput.value.toLowerCase().trim();
-
             menuGrid.innerHTML = '';
-
+            
             const filteredItems = menuItems.filter(item => {
-
-                const matchesCategory =
-                    activeCategory === 'all' || item.cat === activeCategory;
-
-                const matchesSearch =
-                    item.nameEn.toLowerCase().includes(searchQuery) ||
-                    item.nameAr.includes(searchQuery) ||
-                    (item.desc && item.desc.toLowerCase().includes(searchQuery));
-
+                const matchesCategory = activeCategory === 'all' || item.cat === activeCategory;
+                const matchesSearch = item.nameEn.toLowerCase().includes(searchQuery) || 
+                                      item.nameAr.includes(searchQuery) || 
+                                      (item.desc && item.desc.toLowerCase().includes(searchQuery));
                 return matchesCategory && matchesSearch;
             });
 
             if (filteredItems.length === 0) {
-
                 noResults.classList.remove('hidden');
-
             } else {
-
                 noResults.classList.add('hidden');
-
                 filteredItems.forEach(item => {
-
                     const card = document.createElement('div');
-
-                    card.className =
-                        'glass-panel p-5 rounded-3xl card-hover-glow flex flex-col justify-between group relative overflow-hidden';
-
+                    card.className = 'glass-panel p-5 rounded-3xl card-hover-glow flex flex-col justify-between group relative overflow-hidden';
+                    
                     card.innerHTML = `
                         <div class="space-y-3 relative z-10">
-
                             <div class="flex items-start justify-between gap-3">
-
-                                <h3 class="font-black text-lg text-white group-hover:text-amber-400 transition-colors">
-                                    ${item.nameAr}
-                                </h3>
-
+                                <h3 class="font-black text-lg text-white group-hover:text-amber-400 transition-colors">${item.nameAr}</h3>
                                 <div class="text-left shrink-0">
-
-                                    <span class="text-amber-400 font-black text-xl font-en">
-                                        ${item.price}
-                                    </span>
-
-                                    <span class="text-[10px] text-amber-300 font-bold block -mt-1">
-                                        EGP
-                                    </span>
-
+                                    <span class="text-amber-400 font-black text-xl font-en">${item.price}</span>
+                                    <span class="text-[10px] text-amber-300 font-bold block -mt-1">EGP</span>
                                 </div>
-
                             </div>
-
-                            <p class="text-xs text-amber-200/80 font-en font-medium">
-                                ${item.nameEn}
-                            </p>
-
-                            ${
-                                item.desc
-                                    ? `<p class="text-xs text-gray-300 pt-2 leading-relaxed border-t border-amber-500/20 mt-2">${item.desc}</p>`
-                                    : ''
-                            }
-
+                            <p class="text-xs text-amber-200/80 font-en font-medium">${item.nameEn}</p>
+                            ${item.desc ? `<p class="text-xs text-gray-300 pt-2 leading-relaxed border-t border-amber-500/20 mt-2">${item.desc}</p>` : ''}
                         </div>
                     `;
-
                     menuGrid.appendChild(card);
                 });
             }
         }
 
         tabButtons.forEach(btn => {
-
             btn.addEventListener('click', () => {
-
                 tabButtons.forEach(b => {
-
-                    b.classList.remove(
-                        'bg-gradient-to-r',
-                        'from-amber-400',
-                        'to-orange-500',
-                        'text-black',
-                        'shadow-lg',
-                        'shadow-amber-500/20'
-                    );
-
-                    b.classList.add(
-                        'glass-panel',
-                        'text-white'
-                    );
+                    b.classList.remove('bg-gradient-to-r', 'from-amber-400', 'to-orange-500', 'text-black', 'shadow-lg', 'shadow-amber-500/20');
+                    b.classList.add('glass-panel', 'text-white');
                 });
 
-                btn.classList.remove(
-                    'glass-panel',
-                    'text-white'
-                );
-
-                btn.classList.add(
-                    'bg-gradient-to-r',
-                    'from-amber-400',
-                    'to-orange-500',
-                    'text-black',
-                    'shadow-lg',
-                    'shadow-amber-500/20'
-                );
+                btn.classList.remove('glass-panel', 'text-white');
+                btn.classList.add('bg-gradient-to-r', 'from-amber-400', 'to-orange-500', 'text-black', 'shadow-lg', 'shadow-amber-500/20');
 
                 activeCategory = btn.getAttribute('data-cat');
-
                 renderMenu();
             });
         });
@@ -863,16 +601,12 @@
         });
 
         mobileLinks.forEach(link => {
-
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
-
         });
 
         renderMenu();
-
     </script>
-
 </body>
 </html>
